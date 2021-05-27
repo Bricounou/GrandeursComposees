@@ -3,11 +3,24 @@ body{
     background-color:rgb(198, 216, 216);
 }
 
+.div1{
+    width : 840px;
+    height : 420px;
+    border : 2px solid;
+    padding: 5px;
+}
+
 table{
     border-collapse: collapse;
 }
 
+.inputTab{
+    border:none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
 td{
     border: 1px solid black;
-    padding: 20px 70px;
 }
