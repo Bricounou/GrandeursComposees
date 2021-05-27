@@ -13,14 +13,10 @@ temps.minutes = P(20)*3;
 temps.secondes = P(7)*9;
 var unité = ['km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm'];
 
-var énoncé = document.getElementById('énoncé');
-var parent = document.body;
 
-var nouvelÉnoncé = document.createElement('p');
-nouvelÉnoncé.id = 'énoncé';
-nouvelÉnoncé.innerHTML = nom[p] +' roule à '+ vitesse + ' km/h pendant ' + temps.heures +'h' + temps.minutes + 'min' + temps.secondes + 's. Quelle distance, en '+ unité[P(6)] + ', a pourcouru ' + nom[p] + ' ?';
+document.getElementById('énoncé').innerHTML = nom[p] +' roule à '+ vitesse + ' km/h pendant ' + temps.heures +'h' + temps.minutes + 'min' + temps.secondes + 's. Quelle distance, en '+ unité[P(6)] + ', a pourcouru ' + nom[p] + ' ?';
 
-parent.replaceChild(nouvelÉnoncé, énoncé);
+
 
 
 function f1() {
