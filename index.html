@@ -8,43 +8,66 @@
         
     </head>
 
-    <body>
+    <body onclick="this.textDecoration='none'">
         <div class=div1>        
-            <p id="énoncé"> Énoncé</p>
+            <p class="blanc" id="énoncé"> Énoncé</p>
+                        
+            <label class= "blanc" id="conversionlabel" for="name">Conversions :<br></label>
+            <p id="conversionTemps" style='display : block'>
+                <div class=div2>
+                    <p><button class="bouton" onclick="relance(0)" >Relancer un calcul de distance</button></p>
+                    <p><button class="bouton" onclick="relance(1)" >Relancer un calcul de temps</button></p>
+                    <p><button class="bouton" onclick="relance(2)" >Relancer un calcul de vitesse</button></p>
+                    <p><button class="bouton" onclick="relance(3)" >Relancer au hasard</button></p>
+                    
+                </div>
+                <input type="text" id="donnéeTemps"  onclick="this.style.textDecoration='none'" required placeholder="temps" minlength="2" maxlength="10" size="10">
+                =
+                <input type="text" id="calcul1" onblur="f('calcul1')" onclick="this.style.textDecoration='none'" required placeholder="entrez un calcul" minlength="2" maxlength="15" size="10" value="">
+                <select name="unitéTemps" id="unitéTemps" onclick="this.style.textDecoration='none'" size="1">
+                    <option value="">--choisissez une unité--</option>
+                    <option class="unitéTemps1" value="h">h</option>
+                    <option class="unitéTemps1" value="min">min</option>
+                    <option class="unitéTemps1" value="s">s</option>
+                </select>
+            </p>
+            <p id="conversionDistance">
+                <input type="text" id="donnéeDistance" onclick="this.style.textDecoration='none'" required placeholder="distance" minlength="4" maxlength="10" size="10">
+                =
+                <input type="text" id="conversion" onclick="this.style.textDecoration='none'" required placeholder="conversion" minlength="2" maxlength="9h" size="10">
+                <select name="unitéDistance" id="unitéDistance" onclick="this.style.textDecoration='none'" size="1">
+                    <option value="">--choisissez une unité--</option>
+                    <option value="km">km</option>
+                    <option value="hm">hm</option>
+                    <option value="dam">dam</option>
+                    <option value="m">m</option>
+                    <option value="dm">dm</option>
+                    <option value="cm">cm</option>
+                    <option value="mm">mm</option>
+                </select>
+            </p>
             
-            <label for="name">Conversions :<br></label>
-
-            <input type="text" id="donnéeTemps" required placeholder="temps" minlength="2" maxlength="10" size="10">
-            =
-            <input type="text" id="calcul1" onblur="f1()" required placeholder="entrez un calcul" minlength="2" maxlength="15" size="10" value="">
-            <input type="text" id="unitéTemps" required placeholder="unité" minlength="1" maxlength="3" size="1">
-            <br><br>
-            <input type="text" id="donnéeDistance" required placeholder="distance" minlength="4" maxlength="5" size="10">
-            =
-            <input type="text" id="conversion" required placeholder="conversion" minlength="2" maxlength="9h" size="10">
-            <input type="text" id="unitéDistance" required placeholder="unité" minlength="2" maxlength="3" size="1">
-            <br><br>
             
 
             <table>
                 <tr>
-                    <td> <input type="text" class=inputTab id="unitéTableau1" required placeholder="unité" minlength="1" maxlength="3" size="10">  </td>
-                    <td> <input type="text" class=inputTab id="nombreTableau11" required placeholder="nombre" minlength="1" maxlength="9" size="10">  </td>
-                    <td> <input type="text" class=inputTab id="nombreTableau12" required placeholder="nombre" minlength="1" maxlength="9" size="10">  </td>
+                    <td> <input type="text" class=inputTab id="unitéTableau1" onclick="this.style.textDecoration='none'" required placeholder="unité" minlength="1" maxlength="3" size="10">  </td>
+                    <td> <input type="text" class=inputTab id="nombreTableau11" onclick="this.style.textDecoration='none'" required placeholder="nombre" minlength="1" maxlength="9" size="10">  </td>
+                    <td> <input type="text" class=inputTab id="nombreTableau12" onclick="this.style.textDecoration='none'" required placeholder="nombre" minlength="1" maxlength="9" size="10">  </td>
                 </tr>
                 <tr>
-                    <td> <input type="text" class=inputTab id="unitéTableau2" required placeholder="unité" minlength="1" maxlength="3" size="10">  </td>
-                    <td> <input type="text" class=inputTab id="nombreTableau21" required placeholder="nombre" minlength="1" maxlength="3" size="10">  </td>
-                    <td> <input type="text" class=inputTab id="nombreTableau22" required placeholder="nombre" minlength="1" maxlength="6" size="10">  </td>
+                    <td> <input type="text" class=inputTab id="unitéTableau2" onclick="this.style.textDecoration='none'" required placeholder="unité" minlength="1" maxlength="3" size="10">  </td>
+                    <td> <input type="text" class=inputTab id="nombreTableau21" onclick="this.style.textDecoration='none'" required placeholder="nombre" minlength="1" maxlength="4" size="10">  </td>
+                    <td> <input type="text" class=inputTab id="nombreTableau22" onclick="this.style.textDecoration='none'" required placeholder="nombre" minlength="1" maxlength="6" size="10">  </td>
                 </tr>
             </table>
             <br>
 
                     
-            <p>Calcul : <input type="text" id="calcul2" onblur="f2()" required placeholder="entrez un calcul" minlength="2" maxlength="15" size="10" value=""> <input type="text" id="unitéFinale" required placeholder="unité" minlength="1" maxlength="6" size="10"> </p>
-            <p>Phrase réponse : <input type="text" id="phraseRéponse"  required placeholder="entrez une phrase réponse"  size="30" value="">  </p>
+            <p>Calcul : <input type="text" id="calcul2" onblur="f('calcul2')" onclick="this.style.textDecoration='none'" required placeholder="entrez un calcul" minlength="2" maxlength="25" size="10" value=""> <input type="text" id="unitéFinale" required placeholder="unité" minlength="1" maxlength="6" size="10"> </p>
+            <p>Phrase réponse : <input type="text" id="phraseRéponse" onclick="this.style.textDecoration='none'" required placeholder="entrez une phrase réponse"  size="30" value="">  </p>
             
-            <button onclick='window.location.reload(false)'>Correction</button>
+            <button onclick='fCorrection()'>Correction</button>
             
             <button onclick='window.location.reload(false)'>Relancer</button>
         </div>

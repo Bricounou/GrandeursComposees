@@ -1,13 +1,43 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:rgb(198, 216, 216);
+    font-family: Calibri, Helvetica, sans-serif;
+    background-color:#fff;
+    background-image: url(lievre-tortue3.png);
+    background-repeat: no-repeat;
+    background-position : top-left ;
+    background-size: 820px,400px;
+    margin : 5px;
 }
 
+#énoncé{
+    font-size: x-large;
+}
+
+#conversionlabel{
+    font-size: large;
+}
 .div1{
-    width : 820px;
+    width : 794px;
     height : 400px;
     border : 2px solid;
     padding: 5px;
+}
+#unitéTemps1{
+    width : 35px;
+}
+.blanc{
+    color: #eee;
+}
+
+.div2{
+    float:right;
+    margin-right: 10%;
+}
+.bouton1{
+    clear : both;
+}
+
+.bouton2{
+    clear : both;
 }
 
 table{
@@ -24,3 +54,26 @@ table{
 td{
     border: 1px solid black;
 }
+
+
+.bouton {background-image: linear-gradient(to right, #485563 0%, #29323c  51%, #485563  100%)}
+.bouton {
+    width : 200px;
+    height : 35px;
+    font-size: x-small;
+   margin: 10px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .bouton:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
